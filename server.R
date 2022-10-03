@@ -121,7 +121,7 @@ function(input, output, session) {
   })
   
   
-  # read candidates' file
+  # read file
   dataset <- reactive({
     
     file <- input$file
@@ -151,12 +151,12 @@ function(input, output, session) {
   
   output$results<- renderDataTable({
     dataset() %>% 
-      dplyr::rowwise() %>% 
+      dplyr::rowwise() %>%
       dplyr::mutate(HED_A = histoc::cHED(A1,A2),
                     HED_B = histoc::cHED(B1,B2),
                     HED_C = histoc::cHED(C1,C2),
                     HED_DR = histoc::cHED(DR1,DR2),
-                    HED_DQ = histoc::cHED(DQ1,DQ2)) %>% 
+                    HED_DQ = histoc::cHED(DQ1,DQ2)) %>%
       ungroup()
     
     })

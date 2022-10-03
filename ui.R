@@ -9,7 +9,7 @@ library(shinycssloaders)
 
 fluidPage(theme = shinytheme("spacelab"),
           
-          headerPanel(title ="", windowTitle = "KARS"),
+          headerPanel(title ="", windowTitle = "cHED"),
           
           #titlePanel("HEADS | FMUP"),
           
@@ -140,7 +140,7 @@ fluidPage(theme = shinytheme("spacelab"),
                                 h6('Grantham distance metric is described in: https://www.science.org/doi/10.1126/science.185.4154.862'),
                                 br(),
                                 h3('Changelog:'),
-                                h4('cHED v0.0.1'),
+                                h4('cHED v0.0.1 (2022-10-01)'),
                                 h6('- first relased')
                                 
                               )

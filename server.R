@@ -145,12 +145,7 @@ function(input, output, session) {
     )
     
     data %>% 
-      dplyr::mutate_at(vars(A1,A2,B1,B2,C1, C2, DR1,DR2, DQ1, DQ2),as.character) 
-    
-    })
-  
-  output$results<- renderDataTable({
-    dataset() %>% 
+      dplyr::mutate_at(vars(A1,A2,B1,B2,C1, C2, DR1,DR2, DQ1, DQ2),as.character) %>% 
       dplyr::rowwise() %>%
       dplyr::mutate(HED_A = histoc::cHED(A1,A2),
                     HED_B = histoc::cHED(B1,B2),
@@ -160,5 +155,19 @@ function(input, output, session) {
       ungroup()
     
     })
+  
+  output$results<- renderDataTable({
+    dataset() 
+    })
+  
+  # Downloadable csv of selected dataset ----
+  output$downloadData <- downloadHandler(
+    filename = function() {
+      paste("results", ".csv", sep = "")
+    },
+    content = function(file) {
+      write.csv2(dataset(), file, row.names = FALSE, fileEncoding="latin1")
+    }
+  )
   
 }

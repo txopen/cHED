@@ -7,7 +7,7 @@ library(gtsummary)
 library(gt)
 library(shinycssloaders)
 
-fluidPage(theme = shinytheme("spacelab"),
+fluidPage(#theme = shinytheme("spacelab"),
           
           headerPanel(title ="", windowTitle = "cHED"),
           
@@ -19,7 +19,7 @@ fluidPage(theme = shinytheme("spacelab"),
           a(href="https://txor.netlify.app/", target="_blank",
             h1("Transplants' Open Registry (TxOR)")),
           
-          navbarPage("HED calculator (version 0.01)",
+          navbarPage("HED calculator (version 0.0.2)",
                      tabPanel("Home", icon = icon("calculator"),
                               sidebarPanel(
                                 HTML('<p><a href="https://txopen.github.io/histoc/index.html">
@@ -123,13 +123,15 @@ fluidPage(theme = shinytheme("spacelab"),
                               mainPanel(
                                 conditionalPanel(condition="input.dataInput=='1'",
                                                  h4("Example data:"),
-                                                 dataTableOutput(outputId = "expl")),
+                                                 dataTableOutput(outputId = "expl"),
+                                                 ),
                                 conditionalPanel(condition="input.dataInput=='2'",
                                                  h4("Uploaded data with HLA typing and respective HED results:"),
-                                                 dataTableOutput(outputId = "results"))
-                                
-                                
-                              )
+                                                 dataTableOutput(outputId = "results"),
+                                                 br(),
+                                                 downloadButton("downloadData", "Download")
+                                                 )
+                                )
                               
                      ),
                      tabPanel("Notes", icon = icon("bars"),
@@ -141,7 +143,9 @@ fluidPage(theme = shinytheme("spacelab"),
                                 br(),
                                 h3('Changelog:'),
                                 h4('cHED v0.0.1 (2022-10-01)'),
-                                h6('- first relased')
+                                h6('- first relased'),
+                                h4('cHED v0.0.2 (2023-04-01)'),
+                                h6('- added Dowload option')
                                 
                               )
                               

@@ -7,7 +7,7 @@ library(gtsummary)
 library(gt)
 library(shinycssloaders)
 
-fluidPage(#theme = shinytheme("spacelab"),
+fluidPage(theme = shinytheme("spacelab"),
           
           headerPanel(title ="", windowTitle = "cHED"),
           
@@ -140,6 +140,9 @@ fluidPage(#theme = shinytheme("spacelab"),
                                 h6('Class I score is computed as decribed in: https://github.com/txopen/HLA-HED.'),
                                 h6('Class II scores is computes as described in: https://sourceforge.net/projects/granthamdist/'),
                                 h6('Grantham distance metric is described in: https://www.science.org/doi/10.1126/science.185.4154.862'),
+                                br(),
+                                h3('How to cite:'),
+                                h6('Bruno A Lima.Human Leukocyte Antigens (HLA) evolutionary divergence (HED) calculator. HLA 2023;101(4):-.'),
                                 br(),
                                 h3('Changelog:'),
                                 h4('cHED v0.0.1 (2022-10-01)'),

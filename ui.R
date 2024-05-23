@@ -19,7 +19,7 @@ fluidPage(theme = shinytheme("spacelab"),
           a(href="https://txor.netlify.app/", target="_blank",
             h1("Transplants' Open Registry (TxOR)")),
           
-          navbarPage("HED calculator (version 0.0.2)",
+          navbarPage("calculated HED (version 0.0.4)",
                      tabPanel("Home", icon = icon("calculator"),
                               sidebarPanel(
                                 HTML('<p><a href="https://txopen.github.io/histoc/index.html">
@@ -29,11 +29,11 @@ fluidPage(theme = shinytheme("spacelab"),
                                 h5('It provides functions to test compatibility between donors and transplant candidates.')
                                 
                               ),
-                              mainPanel(h1("HLA Evolutionary Divergence (HED) calculator"),
+                              mainPanel(h1("calculated HLA Evolutionary Divergence (cHED)"),
                                         br(),
                                         h5("An application to calculate HLA Evolutionary Divergence for Class I and II loci."),
                                         h5("Human Leukocyte Antigens (HLA) are very polymorphic proteins that play a pivotal role on transplantation. HLA-A,-B and -C (class I) are present on virtually all our cells (except red blood cells) while HLA-DR, HLA-DQ and HLA-DP (class II) are mainly on immune cells. While HLA polymorphism may help diversify humanity, it is a huge barrier for successful transplantation, which requires matching, as closely as possible, the HLA types of the recipient and donor."),
-                                        h5("HLA evolutionary divergence (HED) is a metric which reflects immunopeptidome diversity, i.e, it's a quantifiable measure for Grantham distance between the peptide-binding domains of the two alleles of each HLA loci."),
+                                        h5("HLA evolutionary divergence (HED) is a metric which reflects immunopeptidome diversity, i.e, it's a quantifiable measure for Grantham distance between the peptide-binding domains of the two alleles of each HLA locus."),
                                         h3("HLA Class I"),
                                         fluidRow(
                                           column(3, #selectizeInput('a1', choices = NULL, label = "HLA-A* allele 1"),
@@ -141,14 +141,21 @@ fluidPage(theme = shinytheme("spacelab"),
                                 h6('Class II scores is computes as described in: https://sourceforge.net/projects/granthamdist/'),
                                 h6('Grantham distance metric is described in: https://www.science.org/doi/10.1126/science.185.4154.862'),
                                 br(),
+                                #HTML('<iframe width="560" height="315" src="https://youtu.be/S9WhqrkKOJM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'),
+                                HTML('<a href="https://youtu.be/S9WhqrkKOJM">Just wacth a presentation!</a>'),
+                                br(),
                                 h3('How to cite:'),
-                                h6('Bruno A Lima.Human Leukocyte Antigens (HLA) evolutionary divergence (HED) calculator. HLA 2023;101(4):-.'),
+                                HTML('<a href="https://www.lidsen.com/journals/transplantation/transplantation-08-01-208">Bruno A Lima. Calculated Human Leukocyte Antigens Evolutionary Divergence (cHED). OBM Transplantation 2024; Vol 8, Issue 1</a>'),
                                 br(),
                                 h3('Changelog:'),
                                 h4('cHED v0.0.1 (2022-10-01)'),
                                 h6('- first relased'),
                                 h4('cHED v0.0.2 (2023-04-01)'),
-                                h6('- added Dowload option')
+                                h6('- added Dowload option'),
+                                h4('cHED v0.0.3 (2023-08-01)'),
+                                h6('- columns on "Upload data" renamed'),
+                                h4('cHED v0.0.4 (2024-05-23)'),
+                                h6('- on uploaded data, silenced error when "allele does not exist in sequence"')
                                 
                               )
                               

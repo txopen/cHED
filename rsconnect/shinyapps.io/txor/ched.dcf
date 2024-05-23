@@ -5,7 +5,5 @@ account: txor
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 7185168
-bundleId: 6365201
+bundleId: 8651404
 url: https://txor.shinyapps.io/ched/
-when: 1664828622.22938
-lastSyncTime: 1664828622.22938

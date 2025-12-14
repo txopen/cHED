@@ -69,6 +69,7 @@ function(input, output, session) {
                        #, options = list(maxOptions = 8000)
                        )
   
+  
   ## compute DRI for one donor
   heda<-reactive({
     histoc::cHED(input$a1, input$a2)

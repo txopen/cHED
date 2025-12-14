@@ -16,38 +16,58 @@ function(input, output, session) {
   
   updateSelectizeInput(session, "a1", 
                        choices = names(seqs)[startsWith(names(seqs),'A')], 
-                       server = TRUE)
+                       server = FALSE
+                       #, options = list(maxOptions = 8000)
+                       )
   updateSelectizeInput(session, "a2", 
                        choices = names(seqs)[startsWith(names(seqs),'A')], 
-                       server = TRUE)
+                       server = FALSE
+                       #, options = list(maxOptions = 8000)
+                       )
   
   updateSelectizeInput(session, "b1", 
                        choices = names(seqs)[startsWith(names(seqs),'B')], 
-                       server = TRUE)
+                       server = TRUE
+                       #, options = list(maxOptions = 9000)
+                       )
   updateSelectizeInput(session, "b2", 
                        choices = names(seqs)[startsWith(names(seqs),'B')], 
-                       server = TRUE)
+                       server = TRUE
+                       #, options = list(maxOptions = 9000)
+                       )
   
   updateSelectizeInput(session, "c1", 
                        choices = names(seqs)[startsWith(names(seqs),'C')], 
-                       server = TRUE)
+                       server = FALSE
+                       #, options = list(maxOptions = 8000)
+                       )
   updateSelectizeInput(session, "c2", 
                        choices = names(seqs)[startsWith(names(seqs),'C')], 
-                       server = TRUE)
+                       server = FALSE
+                       #, options = list(maxOptions = 8000)
+                       )
   
   updateSelectizeInput(session, "dr1", 
                        choices = paste0(substr(drs,1,4),'*',substr(drs,5,6),':',substr(drs,7,8)), 
-                       server = TRUE)
+                       server = TRUE
+                       #, options = list(maxOptions = 8000)
+                       )
   updateSelectizeInput(session, "dr2", 
                        choices = paste0(substr(drs,1,4),'*',substr(drs,5,6),':',substr(drs,7,8)), 
-                       server = TRUE)
+                       server = TRUE
+                       #, options = list(maxOptions = 8000)
+                       )
   
   updateSelectizeInput(session, "dq1", 
                        choices = paste0(substr(dqs,1,4),'*',substr(dqs,5,6),':',substr(dqs,7,8)), 
-                       server = TRUE)
+                       server = TRUE
+                       #, options = list(maxOptions = 8000)
+                       )
   updateSelectizeInput(session, "dq2", 
                        choices = paste0(substr(dqs,1,4),'*',substr(dqs,5,6),':',substr(dqs,7,8)), 
-                       server = TRUE)
+                       server = TRUE
+                       #, options = list(maxOptions = 8000)
+                       )
   
   ## compute DRI for one donor
   heda<-reactive({

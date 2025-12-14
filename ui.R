@@ -37,11 +37,11 @@ fluidPage(theme = shinytheme("spacelab"),
                                         h3("HLA Class I"),
                                         fluidRow(
                                           column(3, #selectizeInput('a1', choices = NULL, label = "HLA-A* allele 1"),
-                                                 selectInput("a1",
+                                                 selectizeInput("a1",
                                                              "HLA-A* allele 1",
                                                              choices = character(0))
                                                  ),
-                                          column(3, selectInput("a2", 
+                                          column(3, selectizeInput("a2", 
                                                                 "HLA-A* allele 2", 
                                                                 choices = character(0))
                                                  ),
@@ -49,40 +49,40 @@ fluidPage(theme = shinytheme("spacelab"),
                                         ),
                                         
                                         fluidRow(
-                                          column(3, selectInput("b1", 
+                                          column(3, selectizeInput("b1", 
                                                                 "HLA-B* allele 1", 
                                                                 choices = character(0))),
-                                          column(3, selectInput("b2", 
+                                          column(3, selectizeInput("b2", 
                                                                 "HLA-B* allele 2", 
                                                                 choices = character(0))),
                                           column(6,htmlOutput(outputId = "hed_b"))
                                         ),
                                         
                                         fluidRow(
-                                          column(3, selectInput("c1", 
+                                          column(3, selectizeInput("c1", 
                                                                 "HLA-C* allele 1", 
                                                                 choices = character(0))),
-                                          column(3, selectInput("c2", 
+                                          column(3, selectizeInput("c2", 
                                                                 "HLA-C* allele 2", 
                                                                 choices = character(0))),
                                           column(6,htmlOutput(outputId = "hed_c"))
                                         ),
                                         h3("HLA Class II"),
                                         fluidRow(
-                                          column(3, selectInput("dr1", 
+                                          column(3, selectizeInput("dr1", 
                                                                 "HLA-DRB1* allele 1", 
                                                                 choices = character(0))),
-                                          column(3, selectInput("dr2", 
+                                          column(3, selectizeInput("dr2", 
                                                                 "HLA-DRB1* allele 2", 
                                                                 choices = character(0))),
                                           column(6,htmlOutput(outputId = "hed_dr"))
                                         ),
                                         
                                         fluidRow(
-                                          column(3, selectInput("dq1", 
+                                          column(3, selectizeInput("dq1", 
                                                                 "HLA-DQB1* allele 1", 
                                                                 choices = character(0))),
-                                          column(3, selectInput("dq2", 
+                                          column(3, selectizeInput("dq2", 
                                                                 "HLA-DQB1* allele 2", 
                                                                 choices = character(0))),
                                           column(6,htmlOutput(outputId = "hed_dq"))
